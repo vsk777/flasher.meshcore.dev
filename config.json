@@ -27,12 +27,12 @@
     "repeater": {
       "icon": "cell_tower",
       "title": "Repeater",
-      "tooltip": "Special role just for routing packets. Configured via <b>Console</b> on flasher main page"
+      "tooltip": "Special role just for routing packets. Configured via Config/Console on flasher main page"
     },
     "roomServer": {
       "icon": "forum",
       "title": "Room Server",
-      "tooltip": "Special role for local room and routing packets. Configured via <b>Console</b> on flasher main page"
+      "tooltip": "Special role for local room and routing packets. Configured via Config/Console on flasher main page"
     }
   },
   "device": [
@@ -44,6 +44,51 @@
         {
           "role": "gui",
           "version": {
+            "v6.6": {
+              "files": [
+                {
+                  "type": "flash",
+                  "name": "RippleUltra-TDeck-v6.6-merged.bin",
+                  "title": "Combined app+partition+bootloader firmware bin"
+                },
+                {
+                  "type": "download",
+                  "name": "RippleUltra-TDeck-v6.6.bin",
+                  "title": "App firmware bin (use with m5 booloader)"
+                }
+              ],
+              "notes": "* now saves repeater and room server passwords.\n* new 'auto advert ON/OFF' option"
+            },
+            "v6.5": {
+              "files": [
+                {
+                  "type": "flash",
+                  "name": "RippleUltra-TDeck-v6.5-merged.bin",
+                  "title": "Combined app+partition+bootloader firmware bin"
+                },
+                {
+                  "type": "download",
+                  "name": "RippleUltra-TDeck-v6.5.bin",
+                  "title": "App firmware bin (use with m5 booloader)"
+                }
+              ],
+              "notes": "* Existing profiles have SF editable"
+            },
+            "v6.3": {
+              "files": [
+                {
+                  "type": "flash",
+                  "name": "RippleUltra-TDeck-v6.3-merged.bin",
+                  "title": "Combined app+partition+bootloader firmware bin"
+                },
+                {
+                  "type": "download",
+                  "name": "RippleUltra-TDeck-v6.3.bin",
+                  "title": "App firmware bin (use with m5 booloader)"
+                }
+              ],
+              "notes": "* BUG Fix: advert verify caused memory corruption"
+            },
             "v6.2": {
               "files": [
                 {
@@ -77,6 +122,51 @@
         {
           "role": "guiSD",
           "version": {
+            "v6.6": {
+              "files": [
+                {
+                  "type": "flash",
+                  "name": "RippleUltra-TDeck-SD-v6.6-merged.bin",
+                  "title": "Combined app+partition+bootloader firmware bin"
+                },
+                {
+                  "type": "download",
+                  "name": "RippleUltra-TDeck-SD-v6.6.bin",
+                  "title": "App firmware bin (use with m5 booloader)"
+                }
+              ],
+              "notes": "* now saves repeater and room server passwords.\n* new 'auto advert ON/OFF' option"
+            },
+            "v6.5": {
+              "files": [
+                {
+                  "type": "flash",
+                  "name": "RippleUltra-TDeck-SD-v6.5-merged.bin",
+                  "title": "Combined app+partition+bootloader firmware bin"
+                },
+                {
+                  "type": "download",
+                  "name": "RippleUltra-TDeck-SD-v6.5.bin",
+                  "title": "App firmware bin (use with m5 booloader)"
+                }
+              ],
+              "notes": "* Existing profiles have SF editable"
+            },
+            "v6.3": {
+              "files": [
+                {
+                  "type": "flash",
+                  "name": "RippleUltra-TDeck-SD-v6.3-merged.bin",
+                  "title": "Combined app+partition+bootloader firmware bin"
+                },
+                {
+                  "type": "download",
+                  "name": "RippleUltra-TDeck-SD-v6.3.bin",
+                  "title": "App firmware bin (use with m5 booloader)"
+                }
+              ],
+              "notes": "* BUG Fix: advert verify caused memory corruption"
+            },
             "v6.2": {
               "files": [
                 {
@@ -117,6 +207,51 @@
         {
           "role": "gui",
           "version": {
+            "v6.6": {
+              "files": [
+                {
+                  "type": "flash",
+                  "name": "RippleUltra-T5-epaper-v6.6-merged.bin",
+                  "title": "Combined app+partition+bootloader firmware bin"
+                },
+                {
+                  "type": "download",
+                  "name": "RippleUltra-T5-epaper-v6.6.bin",
+                  "title": "App firmware bin (use with m5 booloader)"
+                }
+              ],
+              "notes": "* now saves repeater and room server passwords.\n* new 'auto advert ON/OFF' option"
+            },
+            "v6.5": {
+              "files": [
+                {
+                  "type": "flash",
+                  "name": "RippleUltra-T5-epaper-v6.5-merged.bin",
+                  "title": "Combined app+partition+bootloader firmware bin"
+                },
+                {
+                  "type": "download",
+                  "name": "RippleUltra-T5-epaper-v6.5.bin",
+                  "title": "App firmware bin (use with m5 booloader)"
+                }
+              ],
+              "notes": "* Existing profiles have SF editable"
+            },
+            "v6.3": {
+              "files": [
+                {
+                  "type": "flash",
+                  "name": "RippleUltra-T5-epaper-v6.3-merged.bin",
+                  "title": "Combined app+partition+bootloader firmware bin"
+                },
+                {
+                  "type": "download",
+                  "name": "RippleUltra-T5-epaper-v6.3.bin",
+                  "title": "App firmware bin (use with m5 booloader)"
+                }
+              ],
+              "notes": "* BUG Fix: advert verify caused memory corruption"
+            },
             "v6.0-beta22": {
               "files": [
                 {
@@ -136,7 +271,7 @@
       ]
     },
     {
-      "name": "Lilygo T3 S3",
+      "name": "Lilygo T3 S3 (SX126x)",
       "type": "esp32",
       "tooltip": "<img class='device' src='/img/lilygo_t3s3.png'>",
       "firmware": [
@@ -145,7 +280,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["LilyGo_T3S3_sx1262_companion_radio_usb","merged.bin"]
+              "flash": "LilyGo_T3S3_sx1262_companion_radio_usb.*?-merged\\.bin",
+              "download": "LilyGo_T3S3_sx1262_companion_radio_usb.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -154,7 +290,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["LilyGo_T3S3_sx1262_companion_radio_ble","merged.bin"]
+              "flash": "LilyGo_T3S3_sx1262_companion_radio_ble.*?-merged\\.bin",
+              "download": "LilyGo_T3S3_sx1262_companion_radio_ble.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -163,7 +300,112 @@
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["LilyGo_T3S3_sx1262_Repeater","merged.bin"]
+              "flash": "LilyGo_T3S3_sx1262_Repeater.*?-merged\\.bin",
+              "download": "LilyGo_T3S3_sx1262_Repeater.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "roomServer",
+          "github": {
+            "type": "room-server",
+            "files": {
+              "flash": "LilyGo_T3S3_sx1262_room_server.*?-merged\\.bin",
+              "download": "LilyGo_T3S3_sx1262_room_server.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lilygo T-Beam 1.2 (SX1276)",
+      "type": "esp32",
+      "tooltip": "<img class='device' src='/img/lilygo_tbeam.png'>",
+      "firmware": [
+        {
+          "role": "companionUsb",
+          "github": {
+            "type": "companion",
+            "files": {
+              "flash": "Tbeam_companion_radio_usb.*?-merged\\.bin",
+              "download": "Tbeam_companion_radio_usb.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "companionBle",
+          "github": {
+            "type": "companion",
+            "files": {
+              "flash": "Tbeam_companion_radio_ble.*?-merged\\.bin",
+              "download": "Tbeam_companion_radio_ble.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "repeater",
+          "github": {
+            "type": "repeater",
+            "files": {
+              "flash": "Tbeam_repeater.*?-merged\\.bin",
+              "download": "Tbeam_repeater.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "roomServer",
+          "github": {
+            "type": "room-server",
+            "files": {
+              "flash": "Tbeam_room_server.*?-merged\\.bin",
+              "download": "Tbeam_room_server.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lilygo T-Beam Supreme (SX1262)",
+      "type": "esp32",
+      "tooltip": "<img class='device' src='/img/lilygo_tbeam_supreme.png'>",
+      "firmware": [
+        {
+          "role": "companionUsb",
+          "github": {
+            "type": "companion",
+            "files": {
+              "flash": "T_Beam_S3_Supreme_SX1262_companion_radio_usb.*?-merged\\.bin",
+              "download": "T_Beam_S3_Supreme_SX1262_companion_radio_usb.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "companionBle",
+          "github": {
+            "type": "companion",
+            "files": {
+              "flash": "T_Beam_S3_Supreme_SX1262_companion_radio_ble.*?-merged\\.bin",
+              "download": "T_Beam_S3_Supreme_SX1262_companion_radio_ble.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "repeater",
+          "github": {
+            "type": "repeater",
+            "files": {
+              "flash": "T_Beam_S3_Supreme_SX1262_repeater.*?-merged\\.bin",
+              "download": "T_Beam_S3_Supreme_SX1262_repeater.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "roomServer",
+          "github": {
+            "type": "room-server",
+            "files": {
+              "flash": "T_Beam_S3_Supreme_SX1262_room_server.*?-merged\\.bin",
+              "download": "T_Beam_S3_Supreme_SX1262_room_server.*?-[a-f0-9]{7}\\.bin"
             }
           }
         }
@@ -179,8 +421,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["LilyGo_T-Echo_companion_radio_ble","zip"],
-              "download": ["LilyGo_T-Echo_companion_radio_ble","uf2"]
+              "flash": "LilyGo_T-Echo_companion_radio_ble.*?\\.zip",
+              "download": "LilyGo_T-Echo_companion_radio_ble.*?\\.uf2"
             }
           }
         },
@@ -189,8 +431,8 @@
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["LilyGo_T-Echo_repeater","zip"],
-              "download": ["LilyGo_T-Echo_repeater","uf2"]
+              "flash": "LilyGo_T-Echo_repeater.*?\\.zip",
+              "download": "LilyGo_T-Echo_repeater.*?\\.uf2"
             }
           }
         },
@@ -199,8 +441,8 @@
           "github": {
             "type": "room-server",
             "files": {
-              "flash": ["LilyGo_T-Echo_room_server","zip"],
-              "download": ["LilyGo_T-Echo_room_server","uf2"]
+              "flash": "LilyGo_T-Echo_room_server.*?\\.zip",
+              "download": "LilyGo_T-Echo_room_server.*?\\.uf2"
             }
           }
         }
@@ -216,7 +458,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["LilyGo_TLora_V2_1_1_6_companion_radio_usb","merged.bin"]
+              "flash": "LilyGo_TLora_V2_1_1_6_companion_radio_usb.*?-merged\\.bin",
+              "download": "LilyGo_TLora_V2_1_1_6_companion_radio_usb.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -225,7 +468,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["LilyGo_TLora_V2_1_1_6_companion_radio_ble","merged.bin"]
+              "flash": "LilyGo_TLora_V2_1_1_6_companion_radio_ble.*?-merged\\.bin",
+              "download": "LilyGo_TLora_V2_1_1_6_companion_radio_ble.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -234,7 +478,8 @@
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["LilyGo_TLora_V2_1_1_6_Repeater","merged.bin"]
+              "flash": "LilyGo_TLora_V2_1_1_6_Repeater.*?-merged\\.bin",
+              "download": "LilyGo_TLora_V2_1_1_6_Repeater.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -243,7 +488,8 @@
           "github": {
             "type": "room-server",
             "files": {
-              "flash": ["LilyGo_TLora_V2_1_1_6_room_server","merged.bin"]
+              "flash": "LilyGo_TLora_V2_1_1_6_room_server.*?-merged\\.bin",
+              "download": "LilyGo_TLora_V2_1_1_6_room_server.*?-[a-f0-9]{7}\\.bin"
             }
           }
         }
@@ -259,7 +505,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["Heltec_v2_companion_radio_usb","merged.bin"]
+              "flash": "Heltec_v2_companion_radio_usb.*?-merged\\.bin",
+              "download": "Heltec_v2_companion_radio_usb.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -268,7 +515,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["Heltec_v2_companion_radio_ble","merged.bin"]
+              "flash": "Heltec_v2_companion_radio_ble.*?-merged\\.bin",
+              "download": "Heltec_v2_companion_radio_ble.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -277,7 +525,18 @@
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["Heltec_v2_repeater","merged.bin"]
+              "flash": "Heltec_v2_repeater.*?-merged\\.bin",
+              "download": "Heltec_v2_repeater.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "roomServer",
+          "github": {
+            "type": "room-server",
+            "files": {
+              "flash": "Heltec_v2_room_server.*?-merged\\.bin",
+              "download": "Heltec_v2_room_server.*?-[a-f0-9]{7}\\.bin"
             }
           }
         }
@@ -293,7 +552,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["Heltec_v3_companion_radio_usb","merged.bin"]
+              "flash": "Heltec_v3_companion_radio_usb.*?-merged\\.bin",
+              "download": "Heltec_v3_companion_radio_usb.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -302,7 +562,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["Heltec_v3_companion_radio_ble","merged.bin"]
+              "flash": "Heltec_v3_companion_radio_ble.*?-merged\\.bin",
+              "download": "Heltec_v3_companion_radio_ble.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -311,7 +572,8 @@
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["Heltec_v3_repeater","merged.bin"]
+              "flash": "Heltec_v3_repeater.*?-merged\\.bin",
+              "download": "Heltec_v3_repeater.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -320,7 +582,8 @@
           "github": {
             "type": "room-server",
             "files": {
-              "flash": ["Heltec_v3_room_server","merged.bin"]
+              "flash": "Heltec_v3_room_server.*?-merged\\.bin",
+              "download": "Heltec_v3_room_server.*?-[a-f0-9]{7}\\.bin"
             }
           }
         }
@@ -336,8 +599,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["Heltec_t114_companion_radio_ble","zip"],
-              "download": ["Heltec_t114_companion_radio_ble","uf2"]
+              "flash": "Heltec_t114_companion_radio_ble.*?\\.zip",
+              "download": "Heltec_t114_companion_radio_ble.*?\\.uf2"
             }
           }
         },
@@ -346,8 +609,8 @@
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["Heltec_t114_repeater","zip"],
-              "download": ["Heltec_t114_repeater","uf2"]
+              "flash": "Heltec_t114_repeater.*?\\.zip",
+              "download": "Heltec_t114_repeater.*?\\.uf2"
             }
           }
         },
@@ -356,8 +619,8 @@
           "github": {
             "type": "room-server",
             "files": {
-              "flash": ["Heltec_t114_room_server","zip"],
-              "download": ["Heltec_t114_room_server","uf2"]
+              "flash": "Heltec_t114_room_server.*?\\.zip",
+              "download": "Heltec_t114_room_server.*?\\.uf2"
             }
           }
         }
@@ -373,7 +636,28 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["Heltec_WSL3_companion_radio_ble","merged.bin"]
+              "flash": "Heltec_WSL3_companion_radio_ble.*?-merged\\.bin",
+              "download": "Heltec_WSL3_companion_radio_ble.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "repeater",
+          "github": {
+            "type": "repeater",
+            "files": {
+              "flash": "Heltec_WSL3_repeater.*?-merged\\.bin",
+              "download": "Heltec_WSL3_repeater.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "roomServer",
+          "github": {
+            "type": "room-server",
+            "files": {
+              "flash": "Heltec_WSL3_room_server.*?-merged\\.bin",
+              "download": "Heltec_WSL3_room_server.*?-[a-f0-9]{7}\\.bin"
             }
           }
         }
@@ -389,8 +673,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["RAK_4631_companion_radio_usb", "zip"],
-              "download": ["RAK_4631_companion_radio_usb", "uf2"]
+              "flash": "RAK_4631_companion_radio_usb.*?\\.zip",
+              "download": "RAK_4631_companion_radio_usb.*?\\.uf2"
             }
           }
         },
@@ -399,8 +683,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["RAK_4631_companion_radio_ble", "zip"],
-              "download": ["RAK_4631_companion_radio_ble", "uf2"]
+              "flash": "RAK_4631_companion_radio_ble.*?\\.zip",
+              "download": "RAK_4631_companion_radio_ble.*?\\.uf2"
             }
           }
         },
@@ -409,8 +693,8 @@
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["RAK_4631_Repeater", "zip"],
-              "download": ["RAK_4631_Repeater", "uf2"]
+              "flash": "RAK_4631_Repeater.*?\\.zip",
+              "download": "RAK_4631_Repeater.*?\\.uf2"
             }
           }
         },
@@ -419,8 +703,8 @@
           "github": {
             "type": "room-server",
             "files": {
-              "flash": ["RAK_4631_room_server", "zip"],
-              "download": ["RAK_4631_room_server", "uf2"]
+              "flash": "RAK_4631_room_server.*?\\.zip",
+              "download": "RAK_4631_room_server.*?\\.uf2"
             }
           }
         }
@@ -436,8 +720,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["t1000e_companion_radio_ble", "zip"],
-              "download": ["t1000e_companion_radio_ble", "uf2"]
+              "flash": "t1000e_companion_radio_ble.*?\\.zip",
+              "download": "t1000e_companion_radio_ble.*?\\.uf2"
             }
           }
         }
@@ -450,21 +734,23 @@
       "firmware": [
         {
           "role": "repeater",
-          "subTitle": "(sx1262 version)",
+          "subTitle": "(SX1262 version)",
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["Xiao_C3_Repeater_sx1262","merged.bin"]
+              "flash": "Xiao_C3_Repeater_sx1262.*?-merged\\.bin",
+              "download": "Xiao_C3_Repeater_sx1262.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
         {
           "role": "repeater",
-          "subTitle": "(sx1268 version)",
+          "subTitle": "(SX1268 version)",
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["Xiao_C3_Repeater_sx1268","merged.bin"]
+              "flash": "Xiao_C3_Repeater_sx1268.*?-merged\\.bin",
+              "download": "Xiao_C3_Repeater_sx1268.*?-[a-f0-9]{7}\\.bin"
             }
           }
         }
@@ -480,7 +766,8 @@
           "github": {
             "type": "companion",
             "files": {
-              "flash": ["Xiao_S3_WIO_companion_radio_ble","merged.bin"]
+              "flash": "Xiao_S3_WIO_companion_radio_ble.*?-merged\\.bin",
+              "download": "Xiao_S3_WIO_companion_radio_ble.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -489,7 +776,55 @@
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["Xiao_S3_WIO_Repeater","merged.bin"]
+              "flash": "Xiao_S3_WIO_Repeater.*?-merged\\.bin",
+              "download": "Xiao_S3_WIO_Repeater.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        },
+        {
+          "role": "roomServer",
+          "github": {
+            "type": "room-server",
+            "files": {
+              "flash": "Xiao_S3_WIO_room_server.*?-merged\\.bin",
+              "download": "Xiao_S3_WIO_room_server.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Seeed Studio Xiao nRF52 WIO",
+      "tooltip": "<img class='device' src='/img/xiao_nrf52.png'>",
+      "type": "nrf52",
+      "firmware": [
+        {
+          "role": "companionBle",
+          "github": {
+            "type": "companion",
+            "files": {
+              "flash": "Xiao_nrf52_companion_radio_ble.*?\\.zip",
+              "download": "Xiao_nrf52_companion_radio_ble.*?\\.uf2"
+            }
+          }
+        },
+        {
+          "role": "repeater",
+          "github": {
+            "type": "repeater",
+            "files": {
+              "flash": "Xiao_nrf52_repeater.*?\\.zip",
+              "download": "Xiao_nrf52_repeater.*?\\.uf2"
+            }
+          }
+        },
+        {
+          "role": "roomServer",
+          "github": {
+            "type": "room-server",
+            "files": {
+              "flash": "Xiao_nrf52_room_server.*?\\.zip",
+              "download": "Xiao_nrf52_room_server.*?\\.uf2"
             }
           }
         }
@@ -505,7 +840,8 @@
           "github": {
             "type": "repeater",
             "files": {
-              "flash": ["Station_G2_repeater", "merged.bin"]
+              "flash": "Station_G2_repeater.*?-merged\\.bin",
+              "download": "Station_G2_repeater.*?-[a-f0-9]{7}\\.bin"
             }
           }
         },
@@ -514,7 +850,102 @@
           "github": {
             "type": "room-server",
             "files": {
-              "flash": ["Station_G2_room_server", "merged.bin"]
+              "flash": "Station_G2_room_server.*?-merged\\.bin",
+              "download": "Station_G2_room_server.*?-[a-f0-9]{7}\\.bin"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ProMicro (SX1262)",
+      "type": "nrf52",
+      "tooltip": "<img class='device' src='/img/promicro_sx1262.png'>",
+      "firmware": [
+        {
+          "role": "companionUsb",
+          "github": {
+            "type": "companion",
+            "files": {
+              "flash": "Faketec_companion_radio_usb.*?\\.zip",
+              "download": "Faketec_companion_radio_usb.*?\\.uf2"
+            }
+          }
+        },
+        {
+          "role": "companionBle",
+          "github": {
+            "type": "companion",
+            "files": {
+              "flash": "Faketec_companion_radio_ble.*?\\.zip",
+              "download": "Faketec_companion_radio_ble.*?\\.uf2"
+            }
+          }
+        },
+        {
+          "role": "repeater",
+          "github": {
+            "type": "repeater",
+            "files": {
+              "flash": "Faketec_Repeater.*?\\.zip",
+              "download": "Faketec_Repeater.*?\\.uf2"
+            }
+          }
+        },
+        {
+          "role": "roomServer",
+          "github": {
+            "type": "room-server",
+            "files": {
+              "flash": "Faketec_room_server.*?\\.zip",
+              "download": "Faketec_room_server.*?\\.uf2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ProMicro (LLCC68)",
+      "type": "nrf52",
+      "tooltip":"",
+      "firmware": [
+        {
+          "role": "companionUsb",
+          "github": {
+            "type": "companion",
+            "files": {
+              "flash": "ProMicroLLCC68_companion_radio_usb.*?\\.zip",
+              "download": "ProMicroLLCC68_companion_radio_usb.*?\\.uf2"
+            }
+          }
+        },
+        {
+          "role": "companionBle",
+          "github": {
+            "type": "companion",
+            "files": {
+              "flash": "ProMicroLLCC68_companion_radio_ble.*?\\.zip",
+              "download": "ProMicroLLCC68_companion_radio_ble.*?\\.uf2"
+            }
+          }
+        },
+        {
+          "role": "repeater",
+          "github": {
+            "type": "repeater",
+            "files": {
+              "flash": "ProMicroLLCC68_Repeater.*?\\.zip",
+              "download": "ProMicroLLCC68_Repeater.*?\\.uf2"
+            }
+          }
+        },
+        {
+          "role": "roomServer",
+          "github": {
+            "type": "room-server",
+            "files": {
+              "flash": "ProMicroLLCC68_room_server.*?\\.zip",
+              "download": "ProMicroLLCC68_room_server.*?\\.uf2"
             }
           }
         }

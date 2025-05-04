@@ -53,3 +53,13 @@ body {
 #app .console-input:focus, #app console-input:focus{
   outline: none;
 }
+#app .pre {
+  white-space-collapse: preserve;
+  min-width: 300px;
+}
+#app .version {
+  flex-wrap: wrap;
+}
+#app .version div.field {
+  min-width: 140px;
+}

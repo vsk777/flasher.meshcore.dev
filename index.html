@@ -9,7 +9,6 @@
   <link href="./css/flasher.css" rel="stylesheet">
   <script type="module" src="./flasher.js"></script>
 </head>
-
 <body class="dark">
   <div id="app" v-cloak>
     <div class="flash-container">
@@ -40,13 +39,16 @@
             </div>
             <div class="max" v-else>
               <h6>Flashing complete!</h6>
+              <p v-if="selected.firmware.role === 'roomServer' || selected.firmware.role === 'repeater'">
+                Before you use <b><a target="_blank" href="https://config.meshcore.dev/">Repeater/Room server setup</a></b>, please restart your device.
+              </p>
               <p>
                 <button @click="flasherCleanup()">Close</button>
               </p>
             </div>
           </div>
           <div class="autoscroller">
-            <pre class="term" v-if="flashing.terminal">{{ flashing.terminal }}</pre>
+            <pre class="term" v-if="flashing.log">{{ flashing.log }}</pre>
           </div>
           <nav>
             <progress :value="flashing.percentage" max="100"></progress>
@@ -63,7 +65,7 @@
             <i>{{ getRoleFwValue(selected.firmware, 'icon') }}</i>
             <span class="small">{{ getRoleFwValue(selected.firmware, 'title') }}</span>
           </nav>
-          <nav>
+          <nav class="version">
             <div class="field label suffix border small">
               <select v-model="selected.version">
                 <template v-for="(version, versionName) in selected.firmware.version">
@@ -73,9 +75,9 @@
               <label>Version</label>
               <i>arrow_drop_down</i>
             </div>
-            <span v-if="getSelFwValue('notes')" class="max">
+            <div class="max small-padding pre" v-if="getSelFwValue('notes')">
               {{ getSelFwValue('notes') }}
-            </span>
+            </div>
           </nav>
         </header>
         <ul class="list border" v-if="selected.device.type === 'esp32'">
@@ -90,7 +92,9 @@
             </label>
           </li>
         </ul>
-        <button @click="dfuMode" :disabled="flashing.dfuComplete || !flashing.supported" v-if="selected.device.type === 'nrf52'">
+        <template v-if="selected.device.type === 'nrf52'">
+          <div class="small-space"></div>
+          <button @click="dfuMode" :disabled="flashing.dfuComplete || !flashing.supported">
           <i>{{ flashing.dfuComplete ? 'check' : 'code' }}</i>
           <span>{{ flashing.dfuComplete ? 'DFU mode active' : 'Enter DFU mode' }}</span>
           <div class="tooltip right max" v-if="flashing.supported">
@@ -101,6 +105,7 @@
             Your browser doesn't support Web Serial API. Please use Chrome or Edge on Desktop
           </div>
         </button>
+        </template>
         <div class="medium-space"></div>
         <nav class="small-margin">
         <button @click="flashDevice" :disabled="!flashing.supported">
@@ -157,6 +162,11 @@
           <nav>
             <i>bolt</i>
             <h5 class="small max">MeshCore flasher</h5>
+            <button class="transparent hide-mobile" @click="openSerialGUI()">
+              <i>manufacturing</i>
+              <span>Repeater Setup</span>
+              <div class="tooltip left max">Open GUI to configure Repeaters and Room servers via USB serial</div>
+            </button>
             <button class="transparent" @click="openSerialCon()">
               <i>terminal</i>
               <span>Console</span>
@@ -210,5 +220,5 @@
 
   </div>
 </body>
-
+<script type="module" src="https://cdn.jsdelivr.net/npm/@open-iframe-resizer/core@latest/dist/index.js"></script>
 </html>

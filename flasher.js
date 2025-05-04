@@ -43,7 +43,7 @@ const commandReference  = {
 
 function getGithubReleases(roleType, files) {
   const versions = {};
-  for(const [fileType, [startsWith, endsWith]] of Object.entries(files)) {
+  for(const [fileType, matchRE] of Object.entries(files)) {
     for(const versionType of github) {
       if(versionType.type !== roleType) { continue }
       const version = versions[versionType.version] ??= {
@@ -51,7 +51,7 @@ function getGithubReleases(roleType, files) {
         files: []
       };
       for(const file of versionType.files) {
-        if(!(file.name.startsWith(startsWith) && file.name.endsWith(endsWith))) { continue }
+        if(!new RegExp(matchRE).test(file.name)) { continue }
         version.files.push({
           type: fileType,
           name: file.url,
@@ -70,6 +70,11 @@ function addGithubFiles() {
       const gDef = firmware.github;
       if(!gDef?.files) { continue }
       firmware.version = getGithubReleases(gDef.type, gDef.files);
+
+      // clean versions without files
+      for(const [verName, verValue] of Object.entries(firmware.version)) {
+        if(verValue.files.length === 0) delete firmware.version[verName]
+      }
     }
   }
 
@@ -179,10 +184,17 @@ function setup() {
     flashing.instance = null;
   }
 
+  const openSerialGUI = () => {
+    window.open('https://config.meshcore.dev','meshcore_config','directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=1000,height=800');
+  }
+
   const openSerialCon = async() => {
     const port = selected.port = await navigator.serial.requestPort();
     const serialConsole = serialCon.instance = new SerialConsole(port);
-    serialCon.content =  'Welcome to MeshCore serial console.\n';
+    serialCon.content =  'Welcome to MeshCore serial console.\n'
+    serialCon.content += '-------------------------------------------------------------------------\n';
+    serialCon.content += 'WARNING: This console only works with *Repeater* and *Room server* roles.\n';
+    serialCon.content += '-------------------------------------------------------------------------\n';
     serialCon.content += 'If you came here right after flashing, please restart your device.\n';
     serialCon.content += 'Click on the cursor to get all supported commands.\n\n';
     serialConsole.onOutput = (text) => {
@@ -350,7 +362,8 @@ function setup() {
     consoleEditBox, consoleWindow,
     config, selected, flashing,
     flashDevice, flasherCleanup, dfuMode,
-    serialCon, openSerialCon, sendCommand, closeSerialCon,
+    serialCon, closeSerialCon, openSerialCon,
+    sendCommand, openSerialGUI,
     refresh, commandReference,
     stepBack,
     customFirmwareLoad, getFirmwarePath, getSelFwValue, getRoleFwValue,
