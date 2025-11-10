@@ -101,7 +101,7 @@ function setup() {
   }
 
   const flashing = reactive({
-    supported: 'Serial' in window,
+    supported: 'Serial' in window || 'serial' in window.navigator,
     instance: null,
     active: false,
     percentage: 0,
